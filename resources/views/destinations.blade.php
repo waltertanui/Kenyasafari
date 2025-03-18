@@ -270,3 +270,330 @@
                 <div>
                     <div class="footer-logo">Kenya Safari</div>
                     <p>Experience the magic of Kenya with our personalized safari tours and adventures.</p>
+                @extends('layouts.app')
+                
+                @section('title', 'Safari Destinations - Kenya Safari')
+                
+                @section('content')
+                <div class="py-8 bg-gray-50">
+                    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                        <!-- Hero Banner -->
+                        <div class="relative rounded-xl overflow-hidden mb-10 shadow-xl">
+                            <div class="h-80 md:h-96 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1523805009345-7448845a9e53?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')">
+                                <div class="absolute inset-0 bg-black/40"></div>
+                                <div class="relative h-full flex items-center justify-center z-10">
+                                    <div class="text-center text-white px-4">
+                                        <h1 class="text-4xl md:text-5xl font-bold mb-4">Discover Kenya's Wonders</h1>
+                                        <p class="text-lg md:text-xl max-w-3xl mx-auto">Explore the breathtaking landscapes and incredible wildlife of East Africa</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Introduction -->
+                        <div class="bg-white rounded-xl shadow-lg p-8 mb-10">
+                            <div class="max-w-4xl mx-auto text-center">
+                                <h2 class="text-3xl font-bold mb-6 text-gray-800">Our Safari Destinations</h2>
+                                <p class="text-gray-600 mb-6 text-lg">
+                                    Kenya offers some of the world's most spectacular wildlife viewing opportunities. From the iconic Maasai Mara to the snow-capped peaks of Mount Kenya, our carefully curated safari destinations showcase the incredible diversity of landscapes and wildlife that make Kenya a premier safari destination.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Featured Destinations -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                            <!-- Maasai Mara -->
+                            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-xl hover:-translate-y-2">
+                                <div class="h-60 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1547970810-dc1eac37d174?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+                                <div class="p-6">
+                                    <div class="flex justify-between items-center mb-3">
+                                        <h3 class="text-xl font-bold text-gray-800">Maasai Mara</h3>
+                                        <span class="bg-orange-100 text-orange-800 text-xs font-semibold px-2.5 py-0.5 rounded">Popular</span>
+                                    </div>
+                                    <p class="text-gray-600 mb-4">
+                                        Home to the Great Migration, the Maasai Mara offers unparalleled wildlife viewing with vast savannah plains teeming with lions, elephants, and wildebeest.
+                                    </p>
+                                    <div class="flex items-center text-sm text-gray-500 mb-4">
+                                        <span class="mr-4">⭐ 4.9 (128 reviews)</span>
+                                        <span>3-7 day safaris</span>
+                                    </div>
+                                    <a href="#" class="inline-block bg-orange-600 hover:bg-orange-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300">
+                                        Explore Maasai Mara
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- Amboseli -->
+                            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-xl hover:-translate-y-2">
+                                <div class="h-60 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1612887726773-e64e20cf8ba7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+                                <div class="p-6">
+                                    <div class="flex justify-between items-center mb-3">
+                                        <h3 class="text-xl font-bold text-gray-800">Amboseli</h3>
+                                        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">Family Friendly</span>
+                                    </div>
+                                    <p class="text-gray-600 mb-4">
+                                        Famous for its large elephant herds and stunning views of Mount Kilimanjaro, Amboseli offers incredible photo opportunities and diverse wildlife.
+                                    </p>
+                                    <div class="flex items-center text-sm text-gray-500 mb-4">
+                                        <span class="mr-4">⭐ 4.8 (96 reviews)</span>
+                                        <span>2-5 day safaris</span>
+                                    </div>
+                                    <a href="#" class="inline-block bg-orange-600 hover:bg-orange-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300">
+                                        Explore Amboseli
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- Tsavo -->
+                            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-xl hover:-translate-y-2">
+                                <div class="h-60 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+                                <div class="p-6">
+                                    <div class="flex justify-between items-center mb-3">
+                                        <h3 class="text-xl font-bold text-gray-800">Tsavo National Park</h3>
+                                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Adventure</span>
+                                    </div>
+                                    <p class="text-gray-600 mb-4">
+                                        Kenya's largest national park offers diverse landscapes from mountains and rivers to savannah, with famous red elephants and rich biodiversity.
+                                    </p>
+                                    <div class="flex items-center text-sm text-gray-500 mb-4">
+                                        <span class="mr-4">⭐ 4.7 (84 reviews)</span>
+                                        <span>3-6 day safaris</span>
+                                    </div>
+                                    <a href="#" class="inline-block bg-orange-600 hover:bg-orange-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300">
+                                        Explore Tsavo
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- Lake Nakuru -->
+                            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-xl hover:-translate-y-2">
+                                <div class="h-60 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+                                <div class="p-6">
+                                    <div class="flex justify-between items-center mb-3">
+                                        <h3 class="text-xl font-bold text-gray-800">Lake Nakuru</h3>
+                                        <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded">Bird Watching</span>
+                                    </div>
+                                    <p class="text-gray-600 mb-4">
+                                        Famous for its flamingos and rhino sanctuary, Lake Nakuru offers a unique ecosystem with over 400 bird species and diverse wildlife.
+                                    </p>
+                                    <div class="flex items-center text-sm text-gray-500 mb-4">
+                                        <span class="mr-4">⭐ 4.6 (72 reviews)</span>
+                                        <span>1-3 day safaris</span>
+                                    </div>
+                                    <a href="#" class="inline-block bg-orange-600 hover:bg-orange-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300">
+                                        Explore Lake Nakuru
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- Mount Kenya -->
+                            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-xl hover:-translate-y-2">
+                                <div class="h-60 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1492305175278-3b3afaa2f31f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+                                <div class="p-6">
+                                    <div class="flex justify-between items-center mb-3">
+                                        <h3 class="text-xl font-bold text-gray-800">Mount Kenya</h3>
+                                        <span class="bg-red-100 text-red-800 text-xs font-semibold px-2.5 py-0.5 rounded">Hiking</span>
+                                    </div>
+                                    <p class="text-gray-600 mb-4">
+                                        Africa's second-highest mountain offers breathtaking alpine scenery, unique high-altitude wildlife, and challenging trekking routes.
+                                    </p>
+                                    <div class="flex items-center text-sm text-gray-500 mb-4">
+                                        <span class="mr-4">⭐ 4.9 (64 reviews)</span>
+                                        <span>4-7 day treks</span>
+                                    </div>
+                                    <a href="#" class="inline-block bg-orange-600 hover:bg-orange-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300">
+                                        Explore Mount Kenya
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- Samburu -->
+                            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-xl hover:-translate-y-2">
+                                <div class="h-60 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')"></div>
+                                <div class="p-6">
+                                    <div class="flex justify-between items-center mb-3">
+                                        <h3 class="text-xl font-bold text-gray-800">Samburu</h3>
+                                        <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded">Cultural</span>
+                                    </div>
+                                    <p class="text-gray-600 mb-4">
+                                        Home to unique wildlife species and the colorful Samburu people, this reserve offers authentic cultural experiences and stunning landscapes.
+                                    </p>
+                                    <div class="flex items-center text-sm text-gray-500 mb-4">
+                                        <span class="mr-4">⭐ 4.7 (58 reviews)</span>
+                                        <span>3-5 day safaris</span>
+                                    </div>
+                                    <a href="#" class="inline-block bg-orange-600 hover:bg-orange-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300">
+                                        Explore Samburu
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Safari Types -->
+                        <div class="bg-white rounded-xl shadow-lg p-8 mb-10">
+                            <h2 class="text-3xl font-bold mb-8 text-center text-gray-800">Safari Experiences</h2>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                                <div class="text-center p-6 bg-orange-50 rounded-lg">
+                                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <span class="text-orange-600 text-2xl">🚙</span>
+                                    </div>
+                                    <h3 class="font-bold text-xl mb-3">Game Drives</h3>
+                                    <p class="text-gray-600">
+                                        Experience the thrill of spotting wildlife from our custom 4x4 safari vehicles with expert guides.
+                                    </p>
+                                </div>
+                                <div class="text-center p-6 bg-orange-50 rounded-lg">
+                                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <span class="text-orange-600 text-2xl">🎈</span>
+                                    </div>
+                                    <h3 class="font-bold text-xl mb-3">Hot Air Balloons</h3>
+                                    <p class="text-gray-600">
+                                        Soar above the savannah at dawn for a breathtaking aerial view of Kenya's landscapes and wildlife.
+                                    </p>
+                                </div>
+                                <div class="text-center p-6 bg-orange-50 rounded-lg">
+                                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <span class="text-orange-600 text-2xl">👣</span>
+                                    </div>
+                                    <h3 class="font-bold text-xl mb-3">Walking Safaris</h3>
+                                    <p class="text-gray-600">
+                                        Get closer to nature with guided walking safaris that offer an intimate wildlife experience.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Map Section -->
+                        <div class="bg-white rounded-xl shadow-lg p-8 mb-10">
+                            <h2 class="text-3xl font-bold mb-6 text-center text-gray-800">Kenya Safari Map</h2>
+                            <div class="h-96 bg-gray-200 rounded-lg flex items-center justify-center mb-6">
+                                <span class="text-gray-500">Interactive Map Coming Soon</span>
+                            </div>
+                            <p class="text-gray-600 text-center max-w-3xl mx-auto">
+                                Our safari destinations are strategically located across Kenya's most beautiful regions, offering easy access to diverse wildlife and landscapes.
+                            </p>
+                        </div>
+                        
+                        <!-- Testimonials -->
+                        <div class="bg-white rounded-xl shadow-lg p-8 mb-10">
+                            <h2 class="text-3xl font-bold mb-8 text-center text-gray-800">What Our Guests Say</h2>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                <div class="bg-gray-50 p-6 rounded-lg">
+                                    <div class="flex items-center mb-4">
+                                        <div class="h-12 w-12 rounded-full bg-orange-100 flex items-center justify-center mr-4">
+                                            <span class="text-orange-600 font-bold">JM</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold">James Miller</h4>
+                                            <div class="text-yellow-400 flex">
+                                                ★★★★★
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-600 italic">
+                                        "Our safari to Maasai Mara was the trip of a lifetime. We saw all of the Big Five in just two days! Our guide was incredibly knowledgeable and made sure we had the best experience possible."
+                                    </p>
+                                </div>
+                                
+                                <div class="bg-gray-50 p-6 rounded-lg">
+                                    <div class="flex items-center mb-4">
+                                        <div class="h-12 w-12 rounded-full bg-orange-100 flex items-center justify-center mr-4">
+                                            <span class="text-orange-600 font-bold">SJ</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold">Sarah Johnson</h4>
+                                            <div class="text-yellow-400 flex">
+                                                ★★★★★
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-600 italic">
+                                        "Amboseli National Park was breathtaking. Seeing elephants with Mt. Kilimanjaro in the background was surreal. The accommodations were luxurious and the staff went above and beyond."
+                                    </p>
+                                </div>
+                                
+                                <div class="bg-gray-50 p-6 rounded-lg">
+                                    <div class="flex items-center mb-4">
+                                        <div class="h-12 w-12 rounded-full bg-orange-100 flex items-center justify-center mr-4">
+                                            <span class="text-orange-600 font-bold">DP</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold">David Parker</h4>
+                                            <div class="text-yellow-400 flex">
+                                                ★★★★★
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-600 italic">
+                                        "The hot air balloon safari over Maasai Mara was an experience I'll never forget. Watching the sunrise over the savannah with wildlife below was magical. Worth every penny!"
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="text-center mt-8">
+                                <a href="#" class="text-orange-600 hover:text-orange-700 font-medium">Read More Reviews →</a>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Section -->
+                        <div class="bg-white rounded-xl shadow-lg p-8 mb-10">
+                            <h2 class="text-3xl font-bold mb-8 text-center text-gray-800">Frequently Asked Questions</h2>
+                            <div class="max-w-4xl mx-auto space-y-6">
+                                <div class="border-b border-gray-200 pb-4">
+                                    <h3 class="text-lg font-semibold mb-2">What is the best time to visit Kenya for a safari?</h3>
+                                    <p class="text-gray-600">
+                                        The best time for wildlife viewing is during the dry season (June to October) when animals gather around water sources. The Great Migration in Maasai Mara happens from July to October. However, Kenya is a year-round destination with different experiences in each season.
+                                    </p>
+                                </div>
+                                <div class="border-b border-gray-200 pb-4">
+                                    <h3 class="text-lg font-semibold mb-2">How many days do I need for a good safari experience?</h3>
+                                    <p class="text-gray-600">
+                                        We recommend at least 5-7 days to experience a couple of different parks or reserves. This gives you enough time to see diverse wildlife and landscapes without feeling rushed. Longer safaris of 10-14 days allow you to explore more regions.
+                                    </p>
+                                </div>
+                                <div class="border-b border-gray-200 pb-4">
+                                    <h3 class="text-lg font-semibold mb-2">What should I pack for a Kenya safari?</h3>
+                                    <p class="text-gray-600">
+                                        Pack lightweight, neutral-colored clothing (avoid bright colors), a wide-brimmed hat, sunglasses, sunscreen, insect repellent, comfortable walking shoes, a light jacket for mornings and evenings, binoculars, and a good camera with extra batteries.
+                                    </p>
+                                </div>
+                                <div class="border-b border-gray-200 pb-4">
+                                    <h3 class="text-lg font-semibold mb-2">Are Kenya safaris safe for families with children?</h3>
+                                    <p class="text-gray-600">
+                                        Yes, many of our safaris are family-friendly. We recommend destinations like Amboseli and Lake Nakuru for families, and we can customize itineraries to include activities suitable for children. Most lodges welcome children and some offer special programs for young explorers.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Call to Action -->
+                        <div class="bg-orange-600 rounded-xl shadow-xl p-8 mb-10 text-white">
+                            <div class="max-w-4xl mx-auto text-center">
+                                <h2 class="text-3xl font-bold mb-4">Ready for Your Kenya Safari Adventure?</h2>
+                                <p class="text-lg mb-8 text-orange-100">
+                                    Contact us today to start planning your dream safari. Our expert team will create a personalized itinerary based on your preferences, budget, and travel dates.
+                                </p>
+                                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                                    <a href="{{ route('contact') }}" class="bg-white text-orange-600 hover:bg-orange-100 font-bold py-3 px-6 rounded-lg transition duration-300">
+                                        Contact Us
+                                    </a>
+                                    <a href="#" class="bg-transparent hover:bg-orange-700 border-2 border-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                                        Download Brochure
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
+
+<!-- Add JavaScript for sidebar toggle functionality -->
+<script>
+    function toggleSidebar() {
+        const sidebar = document.getElementById('sidebar');
+        sidebar.style.display = sidebar.style.display === 'block' ? 'none' : 'block';
+    }
+</script>
